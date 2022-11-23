@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Plastic</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+            @import url('https://fonts.googleapis.com/css?family=Bad+Script:200,300,400,500,600,700,800,900&display=swap');
+            * {
+                user-select: none; /* 禁用复制 */
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+            }
+            body {
+                min-height: 100vh;
+                /* background-color: #ccc;
+                display: flex;
+                justify-content: center;
+                align-items: center; */
+            }
+            .section {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                background-color: #ccc;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .title-wrapper {
+                position: relative;
+            }
+            .title {
+                position: relative;
+                line-height: 1em;
+                font-family: 'Poppins';
+                color: transparent;
+                font-size: 15vw;
+                letter-spacing: 1vw;
+                font-weight: 700;
+                height: 1em;
+                -webkit-text-stroke: 4px #999;
+            }
+            .title::before {
+                content: '塑料の故事';
+                position: absolute;
+                display: inline-block;
+                font-size: 6vw;
+                letter-spacing: 1.5vw;
+                width: 37.5vw;
+                transform: translateX(-50%);
+                left: 50%;
+                color: black;
+                transition: .5s linear;
+                -webkit-text-stroke: transparent;
+            }
+            .title::after {
+                content: 'A Simple Story For Nothing';
+                /* content: 'Why Sea Bee Loves PMMA'; */
+                -webkit-text-stroke: transparent;
+                color: black;
+                font-family: 'Bad Script', sans-serif;
+                text-align: center;
+                line-height: 1em;
+                display: block;
+                margin-top: .4vh;
+                height: 1em;
+                width: 100%;
+                font-size: 1.5vw;
+                font-weight: 900;
+                position: absolute;
+                top: 100%;
+                /* text-decoration:underline; */
+                transform:translateY(-50%);
+            }
+            .cover {
+                height: 8vw;
+                width: 70vw;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                background-color: transparent;
+            }
+            .cover img {
+                pointer-events: none;
+                width: 100%;
+                height: 100%;
+                opacity: 1;
+                transition: .5s linear;
+                box-shadow: 0 0 5px rgba(0,0,0,.2);
+            }
+            .title-wrapper:hover .title::before {
+                text-shadow: 1px 1px 3px rgba(0,0,0,.5);
+            }
+            .title-wrapper:hover .cover img{
+                opacity: 0;
+            } 
+            /* .title-wrapper .title::before:hover {
+                color: red;
+            } */
+        </style>
+    </head>
+    <body>
+        <div class="section section1">
+            <div class="title-wrapper">
+                <div class="title">PLASTIC</div>
+                <div class="cover"><img src="../img/plastic.png"></div>
+            </div>
+        </div>
+    </body>
+</html>
